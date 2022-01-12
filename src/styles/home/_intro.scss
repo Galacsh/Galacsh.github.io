@@ -1,0 +1,28 @@
+.home-intro {
+  & {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    word-break: break-all;
+    margin: 0;
+  }
+}
+
+/* ========================= */
+
+.home-intro {
+  & {
+    color: $black-60;
+  }
+  & .highlight {
+    color: $black-100;
+  }
+}
+.dark .home-intro {
+  & {
+    color: $white-60;
+  }
+  & .highlight {
+    color: $white-100;
+  }
+}

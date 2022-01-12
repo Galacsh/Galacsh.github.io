@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "./colors";
+
+$default-font-size: 16px;
+$small-font-size: $default-font-size;
+$default-font-family: "IBM Plex Sans", "Noto Sans KR", -apple-system,
+  "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Arial", "Noto Sans",
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
+
+$container-max-width: 768px;
+
+@import "./util";
+@import "./app";
+@import "./common/index";
+@import "./home/index";
+@import "./post/index";
+@import "./search/index";
+@import "./prism";

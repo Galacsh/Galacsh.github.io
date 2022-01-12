@@ -1,0 +1,251 @@
+.document {
+  & > * {
+    margin: 0 1rem 1rem;
+    line-height: 1.9;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+    & {
+      margin: 4rem 0 1rem 0;
+      padding: 0 1rem;
+      font-weight: 700;
+    }
+    & a.anchor {
+      font-weight: 500;
+      text-decoration: none;
+      margin-right: 0.5rem;
+    }
+    & a.anchor:hover {
+      text-decoration: underline;
+    }
+  }
+  & h1 {
+    font-size: 2.2rem;
+  }
+  & h2 {
+    font-size: 2rem;
+  }
+  & h3 {
+    font-size: 1.8rem;
+  }
+  & h4 {
+    font-size: 1.6rem;
+  }
+  & h5 {
+    font-size: 1.4rem;
+  }
+  & h6 {
+    font-size: 1.2rem;
+  }
+  & p {
+    padding: 0 1rem;
+    margin: 2.25rem 0;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+  }
+  & hr {
+    margin-block-start: 4rem;
+    margin-block-end: 4rem;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    width: 50%;
+  }
+  & .footnotes hr {
+    width: 100%;
+  }
+  & .gatsby-resp-image-wrapper {
+    & {
+      margin-bottom: 1rem;
+    }
+    & img {
+      max-height: 31.25rem;
+      object-fit: contain;
+    }
+  }
+  & p:has(img) {
+    text-align: center;
+  }
+  & blockquote {
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  & blockquote > ol,
+  & blockquote > ul {
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+  }
+  & blockquote p,
+  & blockquote blockquote {
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+  }
+  & li.task-list-item {
+    list-style-type: none;
+  }
+  & ul {
+    padding-inline-start: 1.5em;
+  }
+  & table {
+    & {
+      border-collapse: collapse;
+      width: calc(100% - 2rem);
+    }
+    & th,
+    & td {
+      padding: 0.5rem;
+    }
+  }
+  & a:not(.anchor),
+  & a:not(.anchor):active,
+  & a:not(.anchor):visited,
+  & a:not(.anchor):hover {
+    text-decoration: none;
+  }
+  & a:not(.anchor) {
+    & {
+      display: inline-block;
+      position: relative;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 0.5rem;
+      position: absolute;
+      bottom: 0.25rem;
+      left: 0;
+      display: inline-block;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .document blockquote {
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+  }
+}
+
+/* =================================== */
+.document {
+  & > * {
+    color: $dark-gray-80;
+  }
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    & {
+      color: $dark-gray-100;
+    }
+    & a.anchor * {
+      color: $primary-color-100;
+    }
+    & a.anchor:hover {
+      text-decoration-color: $primary-color-100;
+    }
+  }
+  & hr {
+    border: 1px dashed $dark-gray-30;
+  }
+  & strong,
+  & b {
+    color: $dark-gray-90;
+  }
+  & blockquote {
+    background-color: $lightest-gray-100;
+  }
+  & table {
+    & th,
+    & td {
+      border: 1px solid $dark-gray-10;
+    }
+    & th {
+      background-color: $lightest-gray-100;
+    }
+  }
+  & a:not(.anchor),
+  & a:not(.anchor):active,
+  & a:not(.anchor):visited,
+  & a:not(.anchor):hover {
+    color: $dark-gray-100;
+  }
+  & a:not(.anchor)::after {
+    background-color: $primary-color-30;
+  }
+  & a:not(.anchor):hover::after {
+    background-color: $primary-color-60;
+  }
+}
+
+.dark .document {
+  & * {
+    color: $white-70;
+  }
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    & {
+      color: $white-100;
+    }
+    & a.anchor * {
+      color: $primary-color-100;
+    }
+    & a.anchor:hover {
+      text-decoration-color: $primary-color-100;
+    }
+  }
+  & hr {
+    border: 1px dashed $lightest-gray-30;
+  }
+  & strong,
+  & b {
+    color: $white-80;
+  }
+  & blockquote {
+    background-color: $lightest-gray-05;
+  }
+  & table {
+    & th,
+    & td {
+      border: 1px solid $lightest-gray-10;
+    }
+    & th {
+      background-color: $lightest-gray-10;
+    }
+  }
+  & a:not(.anchor),
+  & a:not(.anchor):active,
+  & a:not(.anchor):visited,
+  & a:not(.anchor):hover {
+    color: $white-100;
+  }
+  & a:not(.anchor)::after {
+    background-color: $primary-color-40;
+  }
+  & a:not(.anchor):hover::after {
+    background-color: $primary-color-80;
+  }
+}

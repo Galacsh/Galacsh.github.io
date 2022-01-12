@@ -1,0 +1,22 @@
+.about-posts {
+  & h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  & p {
+    max-width: 22.5rem;
+    width: 100%;
+  }
+}
+
+/* ============================== */
+.about-posts {
+  & h1 {
+    color: $black-100;
+  }
+}
+.dark .about-posts {
+  & h1 {
+    color: $white-100;
+  }
+}

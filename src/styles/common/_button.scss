@@ -1,0 +1,80 @@
+.btn {
+  & {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &.btn-round {
+    border-radius: 0.5rem;
+  }
+}
+
+.toggle-theme-btn,
+.fast-scroll-btn,
+.nav-back-btn,
+.nav-home-btn {
+  & {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  & i {
+    font-size: 1.5rem;
+  }
+}
+
+/* =============================== */
+
+.btn {
+  &.btn-transparent {
+    & {
+      background-color: $white-80;
+      border: 2px solid $lightest-gray-100;
+    }
+    & .mdi {
+      color: $black-80;
+    }
+    & .mdi.mdi-weather-sunny,
+    & .mdi.mdi-weather-night {
+      color: $primary-color-100;
+    }
+  }
+  &.btn-transparent:hover {
+    border: 2px solid $primary-color-100;
+  }
+  &.btn-primary {
+    & {
+      background-color: $primary-color-100;
+      color: $white-100;
+    }
+    & * {
+      background-color: transparent;
+      color: $white-100;
+    }
+  }
+  &.btn-primary:hover {
+    background-color: $primary-color-90;
+  }
+}
+
+.dark .btn {
+  &.btn-transparent {
+    & {
+      background-color: rgba(27, 30, 43, 0.8);
+      border: 2px solid $white-05;
+    }
+    & .mdi {
+      color: $white-80;
+    }
+    & .mdi.mdi-weather-sunny,
+    & .mdi.mdi-weather-night {
+      color: $primary-color-100;
+    }
+  }
+  &.btn-transparent:hover {
+    border: 2px solid $primary-color-100;
+  }
+}

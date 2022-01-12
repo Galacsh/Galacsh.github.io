@@ -1,0 +1,48 @@
+.toc-wrapper {
+  & {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem 0 0.5rem 1rem;
+    width: 14rem;
+    max-width: 14rem;
+    max-height: calc(100% - 9rem);
+    overflow-y: auto;
+    font-size: 0.875rem;
+  }
+  & .toc-item {
+    & {
+      overflow-x: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 80rem) {
+  .toc-wrapper {
+    display: none;
+  }
+}
+
+/* ======================================== */
+.toc-wrapper {
+  & {
+    border-left: 0.25rem dotted $dark-gray-10;
+  }
+  & .toc-item:hover {
+    color: $black-100;
+  }
+}
+.dark .toc-wrapper {
+  & {
+    border-left: 0.25rem dotted $lightest-gray-10;
+  }
+  & .toc-item:hover {
+    color: $white-100;
+  }
+}

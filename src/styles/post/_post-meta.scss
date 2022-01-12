@@ -1,0 +1,43 @@
+.post-meta {
+  & .thumbnail-img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 25rem;
+  }
+  & .post-tags .post-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    margin: 0 0.75rem 0.75rem 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: $lightest-gray-05;
+  }
+}
+
+/* =================================== */
+.post-meta {
+  & .post-title {
+    color: $black-100;
+  }
+  & .post-date {
+    & * {
+      color: $dark-gray-80;
+    }
+  }
+  & .post-tags .post-tag {
+    background-color: $lightest-gray-100;
+  }
+}
+.dark .post-meta {
+  & .post-title {
+    color: $white-100;
+  }
+  & .post-date {
+    & * {
+      color: $white-80;
+    }
+  }
+  & .post-tags .post-tag {
+    background-color: $lightest-gray-05;
+  }
+}

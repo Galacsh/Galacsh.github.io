@@ -1,0 +1,50 @@
+.post-prev-btn,
+.post-next-btn {
+  & {
+    width: 15rem;
+    max-width: calc(50% - 0.5rem);
+  }
+  & .type {
+    font-weight: 700;
+  }
+  & .title {
+    & {
+      font-weight: 500;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      overflow-x: hidden;
+    }
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+.post-prev-btn {
+  text-align: left;
+}
+.post-next-btn {
+  text-align: right;
+}
+
+/* ============================== */
+.post-prev-btn,
+.post-next-btn {
+  & .type {
+    color: $dark-gray-100;
+  }
+  & .title {
+    color: $dark-gray-80;
+  }
+}
+
+.dark .post-prev-btn,
+.dark .post-next-btn {
+  & .type {
+    color: $white-100;
+  }
+  & .title {
+    color: $white-80;
+  }
+}

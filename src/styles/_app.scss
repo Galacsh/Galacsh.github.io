@@ -1,0 +1,63 @@
+html {
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: $small-font-size;
+  }
+}
+html,
+body,
+.app {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+*:hover,
+*:active,
+*:focus {
+  outline: none;
+}
+
+.app {
+  & {
+    max-width: 100%;
+    position: relative;
+  }
+  & .container {
+    & {
+      width: 100%;
+      background-color: transparent;
+    }
+    & > div {
+      max-width: $container-max-width;
+      margin: 0 auto;
+    }
+  }
+}
+
+::selection {
+  background-color: $primary-color-20;
+}
+/* ================================================================= */
+
+body {
+  & {
+    background-color: $white-100;
+  }
+  & * {
+    color: $dark-gray-100;
+  }
+  &.dark {
+    background-color: $dark-background-color;
+  }
+  &.dark * {
+    color: $white-60;
+  }
+}

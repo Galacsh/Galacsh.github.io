@@ -1,0 +1,67 @@
+.filter-area {
+  & .title-filter {
+    width: 100%;
+    display: block;
+    border-radius: 0.5rem;
+  }
+  & .title-filter,
+  & .title-filter:active,
+  & .title-filter:focus,
+  & .title-filter:hover {
+    border: none;
+    outline: none;
+  }
+  & .tag-filter {
+    & {
+      font-size: 0.75rem;
+      width: 100%;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    & .tag {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+      margin-right: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+  }
+}
+
+/* ============================== */
+.filter-area {
+  & .title-filter {
+    background-color: $lightest-gray-100;
+    color: $black-100;
+  }
+  & .tag-filter {
+    & .tag {
+      background-color: $lightest-gray-100;
+      color: $black-100;
+    }
+    & .tag.active {
+      background-color: $primary-color-100;
+      color: $white-100;
+    }
+  }
+}
+.dark .filter-area {
+  & .title-filter {
+    background-color: $lightest-gray-05;
+    color: $white-100;
+  }
+  & .tag-filter {
+    & .tag {
+      background-color: $lightest-gray-05;
+      color: $white-100;
+    }
+    & .tag.active {
+      background-color: $primary-color-100;
+      color: $white-100;
+    }
+  }
+}
