@@ -3,8 +3,7 @@ const meta = {
   title: "Galacsh",
   description: `Personal blog, built with Gatsby-Starter-Spaceful.`,
   siteUrl: "https://galacsh.github.io",
-  // if prefix is not needed, remove this.
-  // pathPrefix: "/gatsby-starter-spaceful",
+  pathPrefix: "/",
   language: "ko",
   themeColor: `#686FFF`,
 }
