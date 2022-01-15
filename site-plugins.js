@@ -1,6 +1,4 @@
 const getPlugins = manifestOptions => [
-  "gatsby-plugin-sharp",
-  "gatsby-transformer-sharp",
   {
     resolve: "gatsby-plugin-manifest",
     options: manifestOptions,
@@ -75,6 +73,8 @@ const getPlugins = manifestOptions => [
   "gatsby-plugin-image",
   "gatsby-plugin-react-helmet",
   "gatsby-plugin-sitemap",
+  "gatsby-plugin-sharp",
+  "gatsby-transformer-sharp",
 ]
 
 module.exports = { getPlugins }
