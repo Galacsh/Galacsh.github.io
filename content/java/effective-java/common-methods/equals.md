@@ -42,7 +42,7 @@ tags: ["Java", "Effective Java"]
 > **x.equals(y) == true**
 
 반사성이 없는 경우에 equals 메소드는 대표적으로 다음과 같은 문제가 있다.
-List 등의 클래스에서 `java▶ list.contains(x)` 같은 함수는 내부적으로 equals 메소드를 호출하여 동일한 객체가 있는지 판단한다.
+List 등의 클래스에서 `java@ list.contains(x)` 같은 함수는 내부적으로 equals 메소드를 호출하여 동일한 객체가 있는지 판단한다.
 따라서 반사성이 없는 경우에는 동일한 객체가 List에 있음에도 없다고 판단되는 경우가 생긴다.
 
 ## Symmetric (대칭성)
@@ -150,7 +150,7 @@ null이 아닌 참조 값 x, y에 대해 x.equals(y)는 항상 같은 값을 반
 신뢰할 수 없는 자원을 이용하여 equals를 구현하지 말라는 말로도 이어진다.
 신뢰할 수 없는 자원은 항상 같은 값을 반환하리라는 보장이 없기 때문이다.
 
-라이브러리 중에서도 `java▶ java.net.URL`은 이 일관성이 깨져있는데, 이 클래스는 equals 메소드 안에서 네트워크에 접근한다.
+라이브러리 중에서도 `java@ java.net.URL`은 이 일관성이 깨져있는데, 이 클래스는 equals 메소드 안에서 네트워크에 접근한다.
 다만 호환성 문제로 고치지 못하고 있다고 한다.
 
 ## x.equals(null) == false
@@ -158,5 +158,5 @@ null이 아닌 참조 값 x, y에 대해 x.equals(y)는 항상 같은 값을 반
 모든 equals 메소드는 null에 대해 false를 반환해야 한다.
 하지만 굳이 null 체크를 하기 보다는 instanceof 연산자를 통해 처리하자.
 
-`java▶ instanceof` 연산자는 첫번째 피연산자가 null인 경우 false를 반환하는 성질을 가지고 있기도 하며
+`java@ instanceof` 연산자는 첫번째 피연산자가 null인 경우 false를 반환하는 성질을 가지고 있기도 하며
 **ClassCastException**도 방지할 수 있다는 장점이 있다.

@@ -87,8 +87,8 @@ SQL Server에서의 트랜잭션은 기본적으로 3가지 방식이 있다.
   - 인스턴스 or 세션 단위 설정 가능
 - **명시적 트랜잭션 (Explicit Transaction)**
   - 트랜잭션의 시작과 끝을 모두 사용자가 명시적으로 지정
-  - `sql▶ BEGIN TRANSACTION` `sql▶ COMMIT` `sql▶ ROLLBACK`
-  - `sql▶ ROLLBACK` 구문을 만나면 최초의 `sql▶ BEGIN TRANSACTION`까지 수행됨
+  - `sql@ BEGIN TRANSACTION` `sql@ COMMIT` `sql@ ROLLBACK`
+  - `sql@ ROLLBACK` 구문을 만나면 최초의 `sql@ BEGIN TRANSACTION`까지 수행됨
 
 ## ROLLBACK
 
@@ -119,7 +119,7 @@ ROLLBACK 수행 시 관련된 행에 대한 잠금(LOCKING)이 풀리고 다른 
 
 - 복수의 저장점 정의 가능
 - 동일 이름으로 저장점을 정의했을 때는 나중에 정의한 저장점이 유효
-- 저장점이 있음에도 지정하지 않고 `sql▶ ROLLBACK` 만 하는 경우, 트랜잭션 시작 위치로 돌아감
+- 저장점이 있음에도 지정하지 않고 `sql@ ROLLBACK` 만 하는 경우, 트랜잭션 시작 위치로 돌아감
 
 ```sql
 -- Oracle

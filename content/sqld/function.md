@@ -54,6 +54,7 @@ tags: ["DB", "SQLD", "Database"]
 
 - **문자형 함수**
   - 문자를 입력하면 문자나 숫자 값 반환
+
 ```sql
 LOWER, UPPER, LTRIM, RTRIM, TRIM, ASCII,
 SUBSTR/SUBSTRING, LENGTH/LEN
@@ -61,26 +62,30 @@ SUBSTR/SUBSTRING, LENGTH/LEN
 
 - **숫자형 함수**
   - 숫자를 입력하면 숫자 반환
+
 ```sql
-ABS, MOD, ROUND, TRUNC, SIGN, FLOOR, EXP, 
+ABS, MOD, ROUND, TRUNC, SIGN, FLOOR, EXP,
 LOG, LN, POWER, SIN, COS, TAN, CEIL/CEILING, CHR/CHAR
 ```
 
 - **날짜형 함수**
   - DATE 타입의 값 연산
+
 ```sql
-SYSDATE/GETDATE, EXTRACT/DATEPART, 
+SYSDATE/GETDATE, EXTRACT/DATEPART,
 TO_NUMBER(TO_CHAR(, 'YYYY'|'MM'|'DD'))/YEAR|MONTH|DAY
 ```
 
 - **변환형 함수**
   - 문자, 숫자, 날짜형 값의 데이터 타입 변환
+
 ```sql
 TO_NUMBER, TO_CHAR, TO_DATE/CAST, CONSERT
 ```
 
 - **NULL 관련 함수**
   - NULL 처리 함수
+
 ```sql
 TO_NUMBER, TO_CHAR, TO_DATE/CAST, CONSERT
 ```
@@ -98,50 +103,49 @@ TO_NUMBER, TO_CHAR, TO_DATE/CAST, CONSERT
 
 ## 문자형 함수
 
-|                          | Oracle Database                                  | SQL Server                                     | Oracle 예제                   | 결과          |
-| ------------------------ | ------------------------------------------------ | ---------------------------------------------- | ---------------------------- | ------------ |
-| 문자열을 소문자로           | LOWER(문자열)                                     | LOWER(문자열)                                   | LOWER('SQL Expert')          | 'sql expert' |
-| 문자열을 대문자로           | UPPER(문자열)                                     | UPPER(문자열)                                   | UPPER('SQL Expert')          | 'SQL EXPERT' |
-| 문자/숫자를 ASCII 코드로    | ASCII('문자')                                     | ASCII('문자')                                  | ASCII('A')                    | 65          |
-| ASCII 코드를 문자/숫자로    | CHR(코드)                                         | CHAR(코드)                                     | CHR(65)                       | 'A'         |
-| 문자열 합치기              | CONCAT(문자열1, 문자열2)<br/>문자열1 \|\| 문자열2     | CONCAT(문자열1, 문자열2)<br/>문자열1 + 문자열2    | CONCAT('RDBMS', 'SQL')        | 'RDBMS SQL' |
-| m번째부터 n개만큼 출력      | SUBSTR(문자열, m[, n])                             | SUBSTRING(문자열, m[, n])                      | SUBSTR('SQL Expert', 5, 3)    | 'Exp'       |
-| 문자열 개수 출력           | LENGTH(문자열)                                     | LEN(문자열)                                    | LENGTH('SQL Expert')          | 10          |
-| 첫문자부터 지정문자 제거    | LTRIM(문자열[, 지정문자])                            | LTRIM(문자열) 공백제거                          | LTRIM('xxYYZZx', 'x')         | 'YYZZx'     |
-| 마지막문자부터 지정문자 제거 | RTRIM(문자열[, 지정문자])                            | RTRIM(문자열)                                 | 공백제거 RTRIM('XXzzYYzz', 'z') | 'XXzzYY'    |
-| 머리/꼬리/양쪽 지정문자 제거 | TRIM([leading\|trailing\|both] 지정문자 FROM 문자열) | TRIM(문자열) 공백제거                          | TRIM('x' FROM 'xxYZxYx')       | 'YZxY'      |
-
+|                              | Oracle Database                                      | SQL Server                                     | Oracle 예제                     | 결과         |
+| ---------------------------- | ---------------------------------------------------- | ---------------------------------------------- | ------------------------------- | ------------ |
+| 문자열을 소문자로            | LOWER(문자열)                                        | LOWER(문자열)                                  | LOWER('SQL Expert')             | 'sql expert' |
+| 문자열을 대문자로            | UPPER(문자열)                                        | UPPER(문자열)                                  | UPPER('SQL Expert')             | 'SQL EXPERT' |
+| 문자/숫자를 ASCII 코드로     | ASCII('문자')                                        | ASCII('문자')                                  | ASCII('A')                      | 65           |
+| ASCII 코드를 문자/숫자로     | CHR(코드)                                            | CHAR(코드)                                     | CHR(65)                         | 'A'          |
+| 문자열 합치기                | CONCAT(문자열1, 문자열2)<br/>문자열1 \|\| 문자열2    | CONCAT(문자열1, 문자열2)<br/>문자열1 + 문자열2 | CONCAT('RDBMS', 'SQL')          | 'RDBMS SQL'  |
+| m번째부터 n개만큼 출력       | SUBSTR(문자열, m[, n])                               | SUBSTRING(문자열, m[, n])                      | SUBSTR('SQL Expert', 5, 3)      | 'Exp'        |
+| 문자열 개수 출력             | LENGTH(문자열)                                       | LEN(문자열)                                    | LENGTH('SQL Expert')            | 10           |
+| 첫문자부터 지정문자 제거     | LTRIM(문자열[, 지정문자])                            | LTRIM(문자열) 공백제거                         | LTRIM('xxYYZZx', 'x')           | 'YYZZx'      |
+| 마지막문자부터 지정문자 제거 | RTRIM(문자열[, 지정문자])                            | RTRIM(문자열)                                  | 공백제거 RTRIM('XXzzYYzz', 'z') | 'XXzzYY'     |
+| 머리/꼬리/양쪽 지정문자 제거 | TRIM([leading\|trailing\|both] 지정문자 FROM 문자열) | TRIM(문자열) 공백제거                          | TRIM('x' FROM 'xxYZxYx')        | 'YZxY'       |
 
 ## 숫자형 함수
 
-|                              | Oracle Database  | SQL Server        | Oracle 예제                 | 결과       |
-| ---------------------------- | ---------------- | ----------------- | --------------------------- | --------- |
-| 절대값 출력                    | ABS(숫자)        | ABS(숫자)         | ABS(-15)                    | 15        |
-| 양수, 음수, 0 구분             | SIGN(숫자)        | SIGN(숫자)        | SIGN(-3), SIGN(0), SIGN(3)  | -1, 0, 1  |
-| 숫자1/숫자2 나머지 값 ('%' 가능) | MOD(숫자1, 숫자2) | MOD(숫자1, 숫자2)  | MOD(7,3)                    | 1         |
-| 크거나 같은 최소 정수           | CEIL(숫자)        | CEILING(숫자)     | CEIL(38.12), CEIL(-38.12)   | 39, -38   |
-| 작거나 같은 최대 정수           | FLOOR(숫자)       | FLOOR(숫자)       | FLOOR(38.12), FLOOR(-38.12) | 38, -39   |
-| 소숫점 m자리까지 반올림         | ROUND(숫자[, m])  | ROUND(숫자[, m])  | ROUND(38.5235, 3)           | 38.524    |
-| 소숫점 m자리 밑으로 버림        | TRUNC(숫자[, m])  | 없음              | TRUNC(38.5235, 0)           | 38        |
+|                                  | Oracle Database   | SQL Server        | Oracle 예제                 | 결과     |
+| -------------------------------- | ----------------- | ----------------- | --------------------------- | -------- |
+| 절대값 출력                      | ABS(숫자)         | ABS(숫자)         | ABS(-15)                    | 15       |
+| 양수, 음수, 0 구분               | SIGN(숫자)        | SIGN(숫자)        | SIGN(-3), SIGN(0), SIGN(3)  | -1, 0, 1 |
+| 숫자1/숫자2 나머지 값 ('%' 가능) | MOD(숫자1, 숫자2) | MOD(숫자1, 숫자2) | MOD(7,3)                    | 1        |
+| 크거나 같은 최소 정수            | CEIL(숫자)        | CEILING(숫자)     | CEIL(38.12), CEIL(-38.12)   | 39, -38  |
+| 작거나 같은 최대 정수            | FLOOR(숫자)       | FLOOR(숫자)       | FLOOR(38.12), FLOOR(-38.12) | 38, -39  |
+| 소숫점 m자리까지 반올림          | ROUND(숫자[, m])  | ROUND(숫자[, m])  | ROUND(38.5235, 3)           | 38.524   |
+| 소숫점 m자리 밑으로 버림         | TRUNC(숫자[, m])  | 없음              | TRUNC(38.5235, 0)           | 38       |
 
 소숫점 관련하여서는 m이 생략된 경우 디폴트는 0이다.
 
 위 함수들 외에도 다음과 같은 함수들이 있다.
 
 - 삼각 함수 값
-  - `sql▶ SIN(), COS(), TAN()`
+  - `sql@ SIN(), COS(), TAN()`
 - 지수, 거듭제곱, 제곱근, 로그, 자연 로그
-  - `sql▶ EXP(), POWER(), SQRT(), LOG(), LN()`
+  - `sql@ EXP(), POWER(), SQRT(), LOG(), LN()`
 
 ## 날짜형 함수
 
 > 데이터베이스는 날짜를 저장할 때 내부적으로 세기(Century), 년(Year), 월(Month), 일(Day), 시(Hours), 분(Minutes), 초(Seconds)와 같은 숫자 형식으로 변환하여 저장
 
-|                                    | Oracle Database                               | SQL Server                       | Oracle 예제                                                     | 결과 | 
-| ---------------------------------- | --------------------------------------------- | -------------------------------- | -------------------------------------------------------------- | --- | 
-| 현재 날짜 시각                       | SYSDATE                                       | GETDATE()                        | SELECT SYSDATE FROM DUAL;                                      | 2021/03/04<br/>18:52:34 |
-| 날짜 데이터에서 연/월/일시간/분/초 출력 | EXTRACT(YEAR \| MONTH \| DAY FROM d)          | DATEPART(YEAR \| MONTH \| DAY, d) | SELECT EXTRACT(YEAR FROM SYSDATE)<br/>FROM DUAL;               | 2021     |
-| 날짜 데이터에서 연/월/일 출력          | TO_NUMBER(TO_CHAR(d, 'YYYY' \| 'MM \| 'DD'')) | YEAR(d) MONTH(d) DAY(d)           | SELECT TO_NUMBER(TO_CHAR(<br/>SYSDATE, 'YYYYMMDD')) FROM DUAL; | 20210304 |
+|                                         | Oracle Database                               | SQL Server                        | Oracle 예제                                                    | 결과                    |
+| --------------------------------------- | --------------------------------------------- | --------------------------------- | -------------------------------------------------------------- | ----------------------- |
+| 현재 날짜 시각                          | SYSDATE                                       | GETDATE()                         | SELECT SYSDATE FROM DUAL;                                      | 2021/03/04<br/>18:52:34 |
+| 날짜 데이터에서 연/월/일시간/분/초 출력 | EXTRACT(YEAR \| MONTH \| DAY FROM d)          | DATEPART(YEAR \| MONTH \| DAY, d) | SELECT EXTRACT(YEAR FROM SYSDATE)<br/>FROM DUAL;               | 2021                    |
+| 날짜 데이터에서 연/월/일 출력           | TO_NUMBER(TO_CHAR(d, 'YYYY' \| 'MM \| 'DD'')) | YEAR(d) MONTH(d) DAY(d)           | SELECT TO_NUMBER(TO_CHAR(<br/>SYSDATE, 'YYYYMMDD')) FROM DUAL; | 20210304                |
 
 날짜는 여러 가지 형식으로 출력이 되고 날짜 계산에도 사용되기 때문에 그 편리성을 위해서 숫자형으로 저장한다.
 숫자형으로 저장하므로 덧셈, 뺄셈 같은 산술 연산자로도 계산이 가능하다.
@@ -151,6 +155,7 @@ TO_NUMBER, TO_CHAR, TO_DATE/CAST, CONSERT
 ## 변환형 함수
 
 - 데이터 유형 변환 종류
+
   - **명시적 데이터 유형 변환**
     - 데이터 변환형 함수로 명시하는 경우
   - **암시적 데이터 유형 변환**
@@ -158,18 +163,18 @@ TO_NUMBER, TO_CHAR, TO_DATE/CAST, CONSERT
     - 성능 저하 가능성
     - 데이터베이스가 자동 변한하지 못한 경우 에러 발생 가능성
 
-- Oracle Database 
+- Oracle Database
   - **TO_NUMBER(문자열)**
     - 문자열을 숫자로
-    - `sql▶ SELECT TO_NUMBER('30') FROM DUAL;`
+    - `sql@ SELECT TO_NUMBER('30') FROM DUAL;`
       - 30
   - **TO_CHAR(숫자|날짜[, FORMAT])**
     - 숫자/날짜를 FORMAT 형태 문자열로
-    - `sql▶ SELECT TO_CHAR(SYSDATE, 'YYYYMMDD') FROM DUAL;`
+    - `sql@ SELECT TO_CHAR(SYSDATE, 'YYYYMMDD') FROM DUAL;`
       - '20210304'
   - **TO_DATE(문자열[, FORMAT])**
     - 문자열을 FORMAT 형태 날짜로
-    - `sql▶ SELECT TO_DATE('20200324', 'YYYYMMDDHH24MISS') FROM DUAL;`
+    - `sql@ SELECT TO_DATE('20200324', 'YYYYMMDDHH24MISS') FROM DUAL;`
       - 20/03/24
 
 SQL Server는 위 함수들 대신에 **CAST-CONVERT**로 처리한다.
@@ -190,8 +195,8 @@ CAST (
   - NOT NULL 또는 PRIMARY KEY에 속하지 않는 컬럼은 NULL 값을 포함할 수 있음
   - NULL 값을 포함하는 연산의 경우 결과 값도 NULL
 
-결과값을 NULL이 아닌 다른 값을 얻고자 할 때 NVL/ISNULL 함수를 사용한다. 
-NULL 값의 대상이 숫자 유형 데이터인 경우는 주로 0(Zero)으로, 
+결과값을 NULL이 아닌 다른 값을 얻고자 할 때 NVL/ISNULL 함수를 사용한다.
+NULL 값의 대상이 숫자 유형 데이터인 경우는 주로 0(Zero)으로,
 문자 유형 데이터인 경우는 블랭크보다는 ‘x’ 같이 해당 시스템에서 의미 없는 문자로 바꾸는 경우가 많다.
 
 - **NULL이면 대체하여 출력**
@@ -233,15 +238,15 @@ CASE Expression은 IF-THEN-ELSE 논리와 유사한 표현식이며 Oracle의 **
 또한 함수의 성질을 가지고 있으므로, 다른 함수처럼 중첩해서 사용할 수 있다.
 
 ```sql
-SELECT 
-  ENAME, 
-  SAL, 
-  CASE 
-    WHEN SAL >= 2000 THEN 1000 
+SELECT
+  ENAME,
+  SAL,
+  CASE
+    WHEN SAL >= 2000 THEN 1000
     ELSE (
       CASE WHEN SAL >= 1000 THEN 500 ELSE 0 END
-    ) 
-  END as BONUS 
+    )
+  END as BONUS
 FROM EMP;
 ```
 
@@ -278,4 +283,4 @@ WHEN절 전에 표현식이 등장하지 않는다.
 **참고 자료**
 
 - [함수(Function) - 데이터온에어](https://dataonair.or.kr/db-tech-reference/d-guide/sql/?pageid=4&mod=document&uid=342)
-- [Oracle vs SQL Server 명령어 전체 비교 (1) - Yurimac의 순간](https://yurimac.tistory.com/35?category=936171SQL) 
+- [Oracle vs SQL Server 명령어 전체 비교 (1) - Yurimac의 순간](https://yurimac.tistory.com/35?category=936171SQL)

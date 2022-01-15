@@ -20,7 +20,7 @@ String hello = new String("Hello");
 즉, 위 코드는 이 객체를 이용해 새로운 문자열을 생성하므로 불필요하게 객체를 생성한다.
 
 특히 어떤 클래스들은 객체 생성의 비용이 크다. 이런 객체들은 캐시를 해두고 사용하는 것이 나은데,
-예를 들면 `java▶ String.matches(...)` 함수는 내부적으로 **Pattern** 객체를 생성하여 처리하므로
+예를 들면 `java@ String.matches(...)` 함수는 내부적으로 **Pattern** 객체를 생성하여 처리하므로
 자주 사용 될 **Pattern** 객체를 생성하여 정규식을 컴파일 해두고 사용하는 것이 좋다.
 
 ```java
@@ -88,9 +88,9 @@ public class Stack {
 ```
 
 사실 코드만 언뜻 봐서는 문제가 없는 코드로 보인다.
-하지만 `java▶ stack.pop()` 메소드를 실행한다고 하였을 때를 생각해보자.
+하지만 `java@ stack.pop()` 메소드를 실행한다고 하였을 때를 생각해보자.
 
-단순히 사이즈를 줄여 **pop** 처리를 하고 있는데, 이는 사실 `java▶ Object[] elements`에
+단순히 사이즈를 줄여 **pop** 처리를 하고 있는데, 이는 사실 `java@ Object[] elements`에
 **pop** 된 객체에 대한 참조가 남아있게 된다. 더 이상 참조되지 않으므로 GC 되어야 할 객체들이
 지워지지 않고 남아있게 된다는 것이다.
 
@@ -109,8 +109,8 @@ public Object pop() {
 이런 문제는 캐시 처리를 할 때도 자주 발생한다. 따라서 **캐시 처리를 할 때도 주의하자.**
 캐시에 넣어둔 것을 잊고 오래 방치하는 경우가 이에 해당한다.
 
-따라서 `java▶ LinkedHashMap.removeEldestEntry()`, `java▶ java.lang.ref`를 이용하거나
-`java▶ ScheduledThreadPoolExecutor`를 이용하여 캐시 해제를 하는 방법을 고려하자.
+따라서 `java@ LinkedHashMap.removeEldestEntry()`, `java@ java.lang.ref`를 이용하거나
+`java@ ScheduledThreadPoolExecutor`를 이용하여 캐시 해제를 하는 방법을 고려하자.
 
 마지막으로, **리스너**와 **콜백** 처리를 함에도 주의해야 한다.
 사용자가 콜백을 등록한 후 등록 해제를 해주어야 하지만, 하지 않는 경우에 이는 누적될 것이기 때문이다.

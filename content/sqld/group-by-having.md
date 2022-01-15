@@ -21,16 +21,16 @@ tags: ["DB", "SQLD", "Database"]
 ```
 
 - 종류
-  - `sql▶ COUNT(*)`
+  - `sql@ COUNT(*)`
     - NULL 값을 포함한 행의 수
     - 전체 컬럼이 NULL인 행은 존재할 수 없기 떄문
-  - `sql▶ COUNT([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 수
-  - `sql▶ SUM([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 합
-  - `sql▶ AVG([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 평균
-  - `sql▶ MAX([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 최대값
-  - `sql▶ MIN([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 최소값
-  - `sql▶ STDDEV([DISTINCT | ALL] 칼럼이나_표현식)` 표준편차
-  - `sql▶ VARIAN([DISTINCT | ALL] 칼럼이나_표현식)` 분산
+  - `sql@ COUNT([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 수
+  - `sql@ SUM([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 합
+  - `sql@ AVG([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 평균
+  - `sql@ MAX([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 최대값
+  - `sql@ MIN([DISTINCT | ALL] 칼럼이나_표현식)` NULL 제외 행의 최소값
+  - `sql@ STDDEV([DISTINCT | ALL] 칼럼이나_표현식)` 표준편차
+  - `sql@ VARIAN([DISTINCT | ALL] 칼럼이나_표현식)` 분산
   - 기타 벤더 별 통계 함수
 
 ---

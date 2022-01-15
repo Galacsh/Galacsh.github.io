@@ -27,7 +27,7 @@ tags: ["Java", "Effective Java"]
 2. **매번 새 객체를 만들지 않아도 될 때 유용하다.**
 
 같은 객체를 여러 번 만들지 않고 만들어둔 것을 캐시해두고 사용할 수 있다.
-대표적으로 `java▶Boolean.valueOf(boolean)`가 이런 방식을 사용하며 새 객체를 만들지 않는다.
+대표적으로 `java@Boolean.valueOf(boolean)`가 이런 방식을 사용하며 새 객체를 만들지 않는다.
 즉, 동일한 객체가 여러번 요청되고 생성하기에는 무거운 객체에 유용하다.
 
 ‎
@@ -36,7 +36,7 @@ tags: ["Java", "Effective Java"]
 
 생성자와 달리 서브 타입을 반환할 수 있어, 컴팩트한 API를 만들 수 있다.
 또한 명확한 메소드 명으로 개발자들은 추가적인 문서 없이도 클래스를 이용할 수 있다.
-`java▶java.util.Collections` 클래스는 이러한 방식으로
+`java@java.util.Collections` 클래스는 이러한 방식으로
 여러 컬렉션들을 제공하는 45가지 유틸리티 정적 메소드를 구현하였다.
 
 ```java
@@ -62,8 +62,8 @@ public static <T> void fill(List<? super T> list, T obj) {
 4. **반환되는 객체가 호출될 때 마다 달라질 수 있다.**
 
 정적 메소드의 파라미터에 따라 적합한 객체를 반환해 줄 수 있는 장점이 있다.
-열거형(Enum)의 집합, `java▶EnumSet` 클래스는 매개변수로 주어진 `java▶Enum`의 요소 개수에 따라
-서브 클래스인 `java▶ RegularEnumSet` 또는 `java▶ JumboEnumSet`을 반환한다.
+열거형(Enum)의 집합, `java@EnumSet` 클래스는 매개변수로 주어진 `java@Enum`의 요소 개수에 따라
+서브 클래스인 `java@ RegularEnumSet` 또는 `java@ JumboEnumSet`을 반환한다.
 클래스의 사용자 입장에서는 내부적으로 Regular 인지 Jumbo인지 몰라도 되며 각 객체를 알맞게 생성해준다.
 
 ```java
@@ -132,7 +132,7 @@ public class DriverManager {
 
 1. **서브 클래스로 이용될 수 없다.**
 
-`java▶ public` 또는 `java▶ protected` 생성자가 없는 클래스는 서브 클래스로 사용될 수 없다.
+`java@ public` 또는 `java@ protected` 생성자가 없는 클래스는 서브 클래스로 사용될 수 없다.
 예를 들어, Collections 클래스는 다른 클래스에서 상속 받을 수 없다.
 
 ‎

@@ -23,7 +23,7 @@ tags: ["Java", "Effective Java"]
 
 Builder는 정적 멤버 클래스로 생각하면 된다.
 클래스 자체의 생성자는 직접 호출할 수 없게 하고, 정적 멤버 클래스인 Builder를 통해
-필드 값을 설정하고 `java▶ build()` 하여 객체를 생성하게끔 한다.
+필드 값을 설정하고 `java@ build()` 하여 객체를 생성하게끔 한다.
 
 ```java
 public class Post {
@@ -75,7 +75,7 @@ Post post = Post.Builder("제목", "글 내용")
 클래스 계층에 활용한다니 말이 좀 어렵지만, 상위 클래스에서 Builder를 구현해두고
 하위 클래스에서 Builder도 상속 받아 확장할 수 있음을 의미한다.
 
-다만 `java▶ public` 또는 `java▶ protected` 생성자가 없는 위 코드는 상속 받을 수 없으므로
+다만 `java@ public` 또는 `java@ protected` 생성자가 없는 위 코드는 상속 받을 수 없으므로
 상위 클래스는 abstract class이 어야 할 것이다.
 
 ```java
@@ -177,4 +177,4 @@ PostWithImage post = new PostWithImage.Builder("hello.png")
 > - 매개변수가 많은 경우 좋다.
 > - 본 클래스는 **private** 생성자로, Builder를 매개변수로 받게 한다.
 > - 멤버 클래스 **Builder**는 **static** 클래스로 만든다.
-> - **Builder**의 `java▶ build()` 메소드는 만들어둔 본 클래스의 **private** 생성자를 이용하여 객체를 생성한다.
+> - **Builder**의 `java@ build()` 메소드는 만들어둔 본 클래스의 **private** 생성자를 이용하여 객체를 생성한다.

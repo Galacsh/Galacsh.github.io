@@ -1,6 +1,6 @@
 ---
 date: 2021-08-29 15:11:00
-title: "평일에 매일 데리러오면 인정"
+title: "관계형 데이터베이스 개요"
 publish: true
 tags: ["DB", "SQLD", "Database"]
 ---
