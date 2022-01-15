@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-spaceful",
+  "name": "galacsh",
   "private": true,
-  "description": "Gatsby blog starter",
+  "description": "Personal blog, built with Gatsby-Starter-Spaceful.",
   "version": "0.1.0",
   "author": "Galacsh <galacsh.dev@gmail.com>",
   "dependencies": {
@@ -22,7 +22,7 @@
     "gatsby-plugin-sharp": "^3.14.3",
     "gatsby-plugin-sitemap": "^4.10.0",
     "gatsby-remark-autolink-headers": "^4.11.0",
-    "gatsby-remark-images": "^6.4.0",
+    "gatsby-remark-images": "^6.4.₩``0",
     "gatsby-remark-prismjs": "^5.11.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-remark": "^4.11.0",
@@ -51,7 +51,6 @@
     "start": "gatsby develop -H 0.0.0.0 ",
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "deploy-branch": "gatsby build --prefix-paths && gh-pages -d public -b doc"
+    "deploy-branch": "gatsby build --prefix-paths && gh-pages -d public -b prod"
   }
 }

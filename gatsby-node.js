@@ -84,7 +84,7 @@ const createPostsMetaData = async ({ graphql, reporter }) => {
             slug
             frontmatter {
               title
-              date(formatString: "MMM DD, YYYY")
+              date(formatString: "MMMM DD, YYYY")
               tags
               thumbnail {
                 publicURL
