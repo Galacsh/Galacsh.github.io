@@ -40,7 +40,8 @@
   }
 }
 .post-list {
-  & .post-year {
+  & .post-month,
+  & .post-month * {
     color: $dark-gray-30 !important;
   }
   & .post-item {
@@ -53,7 +54,8 @@
   }
 }
 .dark .post-list {
-  & .post-year {
+  & .post-month,
+  & .post-month * {
     color: $lightest-gray-30 !important;
   }
   & .post-item {

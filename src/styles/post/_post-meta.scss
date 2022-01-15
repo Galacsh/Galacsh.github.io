@@ -1,7 +1,7 @@
 .post-meta {
   & .thumbnail-img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     max-height: 25rem;
   }
   & .post-tags .post-tag {
