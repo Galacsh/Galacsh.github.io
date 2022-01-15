@@ -1,7 +1,7 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby"
 
 /**
- * @returns {object} title, author, siteUrl, language, pathPrefix, description, postsPerList
+ * @returns {object} title, author, siteUrl, language, pathPrefix, description
  */
 export const useSiteMetadata = () => {
   const { site } = useStaticQuery(graphql`
@@ -14,11 +14,10 @@ export const useSiteMetadata = () => {
           language
           pathPrefix
           description
-          postsPerList
         }
       }
     }
-  `);
+  `)
 
-  return site?.siteMetadata;
-};
+  return site?.siteMetadata
+}
