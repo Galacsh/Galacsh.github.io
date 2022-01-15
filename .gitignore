@@ -69,4 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 # Meta data for docs
-src/posts.json
+posts.json
