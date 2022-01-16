@@ -3,8 +3,16 @@
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.5;
-    word-break: break-all;
+    word-break: normal;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-intro {
+    & {
+      word-break: break-all;
+    }
   }
 }
 

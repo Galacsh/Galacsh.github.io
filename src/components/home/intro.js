@@ -4,10 +4,14 @@ const Intro = () => {
   return (
     <div className="mb-50 mx-10">
       <h1 className="home-intro">
-        <span className="highlight">Hello!👋 I'm Galacsh. </span>This site is a
-        demo of Gatsby starter 🚀 for blogging. This starter,{" "}
-        <span className="highlight">Gatsby-Starter-Spaceful </span> supports
-        minimal functionalities for blogging.
+        <span className="highlight mr-05">Hello!👋 I'm Galacsh.</span>
+        <br />
+        <span>This nickname, which sounds like</span>
+        <span className="highlight ml-05">galaxy</span>
+        <span>, was named after</span>
+        <span className="highlight mx-05">'Gala'</span>
+        <span>and my</span>
+        <span className="highlight mx-05">initials.</span>
       </h1>
     </div>
   )
