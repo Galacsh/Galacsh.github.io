@@ -12,7 +12,7 @@ const PrevNextButton = ({ prev, next }) => {
 
 const PrevButton = ({ prev }) => (
   <div className={"mr-05 post-prev-btn"}>
-    <div className={"type"}>Previous</div>
+    <div className={"type"}>이전 글</div>
     <div>
       <span
         onClick={() => navigate("/post/" + prev.slug)}
@@ -26,7 +26,7 @@ const PrevButton = ({ prev }) => (
 )
 const NextButton = ({ next }) => (
   <div className={"ml-05 post-next-btn"}>
-    <div className={"type"}>Next</div>
+    <div className={"type"}>다음 글</div>
     <div>
       <span
         onClick={() => navigate("/post/" + next.slug)}

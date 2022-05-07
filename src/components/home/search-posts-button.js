@@ -10,7 +10,7 @@ const SearchPostsButton = () => {
         onClick={() => navigate("/search")}
         onKeyDown={() => navigate("/search")}
       >
-        Search Posts
+        글 검색하기
         <MDIcon iconName="arrow-right" className="text-15 ml-05" />
       </div>
     </div>

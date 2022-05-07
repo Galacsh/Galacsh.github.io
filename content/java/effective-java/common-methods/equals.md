@@ -39,7 +39,7 @@ tags: ["Java", "Effective Java"]
 
 ## Reflexive (반사성)
 
-> **x.equals(y) == true**
+> **x.equals(x) == true**
 
 반사성이 없는 경우에 equals 메소드는 대표적으로 다음과 같은 문제가 있다.
 List 등의 클래스에서 `java@ list.contains(x)` 같은 함수는 내부적으로 equals 메소드를 호출하여 동일한 객체가 있는지 판단한다.

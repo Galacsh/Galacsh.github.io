@@ -24,7 +24,7 @@ const FilterArea = ({ filterPosts, allPosts }) => {
       <div className={"mb-10"}>
         <input
           type="text"
-          placeholder="Title to search..."
+          placeholder="검색할 제목을 입력하세요."
           className="pa-05 text-10 title-filter"
           onChange={e => {
             setTitleInput(e.target.value.trim())
