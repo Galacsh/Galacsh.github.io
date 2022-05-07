@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgalacsh=self.webpackChunkgalacsh||[]).push([[883],{9616:function(e,t,l){l.r(t);var n=l(7294),c=l(6634);t.default=function(){return n.createElement(n.Fragment,null,n.createElement(c.Z,{title:"페이지를 찾을 수 없습니다."}),n.createElement("h1",{style:{color:"#fff",textAlign:"center"}},"404"),n.createElement("p",{style:{textAlign:"center"}},"페이지를 찾을 수 없습니다."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-8137510fa03a6231b813.js.map
